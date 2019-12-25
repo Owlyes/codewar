@@ -6,8 +6,9 @@
 
 def get_sum(a,b)
   (a == b) ? a : ((a < b) ? (a..b).sum : (b..a).sum)
-  # (a < b) ? (a..b).reduce(:+) : (b..a).reduce(:+)
-  # (a + b) / 2.0 * ((a - b).abs + 1)
+
+  # (a < b) ? (a..b).reduce(:+) : (b..a).reduce(:+)  # other sol 1
+  # (a + b) / 2.0 * ((a - b).abs + 1)  # other sol 2
 end
 
 p get_sum(0,1) #,1)
