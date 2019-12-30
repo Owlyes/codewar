@@ -3,7 +3,8 @@
 # --- 2019.12.29 created --------------------------
 def pig_it text
   text.split(' ').map { |w| 
-    ((w.slice(0) =~ /[^A-Za-z]/) != 0) ? has_ay = "ay" : has_ay = ""
+    # ((w.slice(0) =~ /[^A-Za-z]/) != 0) ? has_ay = "ay" : has_ay = ""
+    (w.slice(0) =~ /[[:alpha:]]/) ? has_ay = "ay" : has_ay = ""
     w.slice(1..(w.size-1)) + w.slice(0) + has_ay
   }.join(' ')
 
