@@ -4,11 +4,10 @@
 # If anything in the text isn't a letter, ignore it and don't return it.
 # --- 2019.12.30 created --------------------------
 def alphabet_position(text)
-  text.split('').reduce([]) {|accu, x| (x =~ /[[:alpha:]]/) ? accu << (x.downcase.ord - 96) : accu }.join(' ')
-
-
+  text.split('').reduce([]) {|accu, x| ((x =~ /[[:alpha:]]/) == 0) ? accu << (x.upcase.ord - 64) : accu }.join(' ')
+  
   # #===== other sol 1:
-  # text.gsub(/[^a-z]/i, '').upcase.bytes.map {|x| x - 64 }.join(' ')
+  # text.gsub(/[^a-zA-Z]/, '').upcase.bytes.map {|x| x - 64 }.join(' ')
 
   # #===== other sol 2:
   # text.gsub(/[^a-z]/i, '').chars.map{ |c| c.downcase.ord - 96 }.join(' ')
