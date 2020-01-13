@@ -18,17 +18,12 @@ function isIsogram(str){
 }
 
 
-class Test {
-  static assertSimilar(fun, out) {
-    console.log(fun == out ? fun == out : [fun, out]);
-  }
-}
-
+let Test = require('./test_assert');
 Test.assertSimilar( isIsogram("Dermatoglyphics"), true );
 Test.assertSimilar( isIsogram("isogram"), true );
 Test.assertSimilar( isIsogram("aba"), false);
 Test.assertSimilar( isIsogram("moOse"), false);
 Test.assertSimilar( isIsogram("isIsogram"), false );
 Test.assertSimilar( isIsogram(""), true);
-console.log('------------')
+console.log('------------');
 
