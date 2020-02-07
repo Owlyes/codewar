@@ -1,12 +1,12 @@
 # Extract the domain name from a URL
 # Write a function that when given a URL as a string, parses out just the domain name and returns it as a string.
 def domain_name(url)
- url.gsub(/(?:.*\/\/)?(?:www\.)?(.*?)(\..*|\/.*)/i, '\1' )
+#  url.gsub(/(?:.*\/\/)?(?:www\.)?(.*?)(\..*|\/.*)/i, '\1' )
 
 
 # # other solution:
-#  url.match(/(?:https?:\/\/)?(?:www\.)?([A-z\d\-]+)/i)[1].to_s
-#  url.match(/(?:https?:\/\/)?(?:www\.)?([A-z\d\-]+)(.*)/i)[2].to_s
+ url.match(/(?:https?:\/\/)?(?:www\.)?([A-z\d\-]+)/i)[1]
+#  url.match(/(?:https?:\/\/)?(?:www\.)?([A-z\d\-]+)(.*)/i)[1]
 end
 
 require './test_assert'
