@@ -4,8 +4,8 @@
 
 function DNA_strand($dna) {
   $dna_split = str_split($dna,1);
-  $out = array_map('dnaMap',$dna_split);
-  return join('',$out);
+  $out = array_map('dnaMap', $dna_split);
+  return join('', $out);
 }
 
 function dnaMap($input){
